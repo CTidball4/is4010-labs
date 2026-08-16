@@ -35,7 +35,7 @@ Its `__str__` result must include the inherited book information, file size, and
 ## Test locally
 
 ```bash
-PYTHONPATH=week06 pytest week06/tests/ -v
+uv run --directory week06 python -m pytest tests/ -v
 ```
 
 ## Submit
@@ -47,4 +47,3 @@ git push origin main
 ```
 
 A green Week 06 badge earns 10 points.
-

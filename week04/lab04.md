@@ -34,7 +34,7 @@ Requirements:
 ## Test locally
 
 ```bash
-PYTHONPATH=week04 pytest week04/tests/ -v
+uv run --directory week04 python -m pytest tests/ -v
 ```
 
 ## Submit
@@ -46,4 +46,3 @@ git push origin main
 ```
 
 A green Week 04 badge earns 10 points.
-

@@ -1,4 +1,4 @@
-"""Structural checks for the badge-graded Lab 02 prompt journal."""
+"""Structural checks for the badge-graded Lab 02 comparison journal."""
 
 from __future__ import annotations
 
@@ -26,36 +26,52 @@ def section(text: str, heading: str, next_heading_level: int = 2) -> str:
     return match.group(1).strip()
 
 
-def test_all_prompt_sections_and_blocks_exist():
+def word_count(text: str) -> int:
+    return len(re.findall(r"\b[\w'-]+\b", text))
+
+
+def test_all_required_sections_exist():
     text = journal_text()
     headings = [
-        "## Function 1: make_greeting",
-        "### Initial prompt 1",
-        "### Refined CPTF prompt 1",
-        "## Function 2: is_even",
-        "### Initial prompt 2",
-        "### Refined CPTF prompt 2",
-        "## Function 3: count_vowels",
-        "### Initial prompt 3",
-        "### Refined CPTF prompt 3",
-        "## Test-guided revision",
-        "## Explanation and reflection",
+        "## Tool check",
+        "### GitHub Copilot CLI",
+        "### Antigravity CLI",
+        "## Shared task",
+        "### Shared prompt",
+        "### Copilot CLI observations",
+        "### Antigravity CLI observations",
+        "### Comparison",
+        "## Test-guided implementation",
+        "## Preferred tool combination",
     ]
     for heading in headings:
         assert heading in text, f"Missing required heading: {heading}"
 
     prompt_blocks = re.findall(r"```text\s*\n(.+?)\n```", text, re.DOTALL)
-    assert len(prompt_blocks) == 6, "Include six nonempty fenced text prompt blocks"
-    assert all(block.strip() for block in prompt_blocks)
+    assert len(prompt_blocks) == 1, "Include one nonempty shared-prompt block"
+    assert prompt_blocks[0].strip()
 
 
-def test_test_guided_revision_has_required_length():
+def test_tool_checks_are_completed():
     text = journal_text()
-    content = section(text, "## Test-guided revision")
-    assert len(re.findall(r"\b[\w'-]+\b", content)) >= 75
+    tool_check = section(text, "## Tool check")
+    assert word_count(tool_check) >= 20, "Complete both CLI tool checks"
 
 
-def test_explanation_and_reflection_has_required_length():
+def test_observations_and_comparison_have_required_length():
     text = journal_text()
-    content = section(text, "## Explanation and reflection")
-    assert len(re.findall(r"\b[\w'-]+\b", content)) >= 100
+    shared_task = section(text, "## Shared task")
+    copilot = section(shared_task, "### Copilot CLI observations", 3)
+    antigravity = section(shared_task, "### Antigravity CLI observations", 3)
+    comparison = section(shared_task, "### Comparison", 3)
+    assert word_count(copilot) >= 50
+    assert word_count(antigravity) >= 50
+    assert word_count(comparison) >= 100
+
+
+def test_reflections_have_required_length():
+    text = journal_text()
+    implementation = section(text, "## Test-guided implementation")
+    preference = section(text, "## Preferred tool combination")
+    assert word_count(implementation) >= 100
+    assert word_count(preference) >= 100

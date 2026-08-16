@@ -12,7 +12,7 @@ A green badge on your fork's `main` branch means the corresponding lab is comple
 | Lab | Topic | Status |
 |---:|---|:---:|
 | 01 | Repository and development setup | [![Week 01](../../actions/workflows/week01.yml/badge.svg?branch=main)](../../actions/workflows/week01.yml) |
-| 02 | AI-generated Python preview | [![Week 02](../../actions/workflows/week02.yml/badge.svg?branch=main)](../../actions/workflows/week02.yml) |
+| 02 | Compare CLI coding agents | [![Week 02](../../actions/workflows/week02.yml/badge.svg?branch=main)](../../actions/workflows/week02.yml) |
 | 03 | Python basics and automated testing | [![Week 03](../../actions/workflows/week03.yml/badge.svg?branch=main)](../../actions/workflows/week03.yml) |
 | 04 | Data structures | [![Week 04](../../actions/workflows/week04.yml/badge.svg?branch=main)](../../actions/workflows/week04.yml) |
 | 05 | Functions and error handling | [![Week 05](../../actions/workflows/week05.yml/badge.svg?branch=main)](../../actions/workflows/week05.yml) |
@@ -28,7 +28,7 @@ A green badge on your fork's `main` branch means the corresponding lab is comple
 
 ## Start here
 
-Complete [Lab 01](week01/lab01.md). It walks you through forking this repository, cloning your fork, enabling GitHub Actions, and preparing Python for the first half of the course.
+Complete [Lab 01](week01/lab01.md). It walks you through the terminal, forking this repository, cloning your fork, enabling GitHub Actions, and preparing Python with `uv` for the first half of the course.
 
 GitHub disables workflows in a new public fork until its owner enables them. Open the **Actions** tab in your fork and select **I understand my workflows, go ahead and enable them** before pushing your Lab 01 setup record.
 
@@ -40,4 +40,4 @@ GitHub disables workflows in a new public fork until its owner enables them. Ope
 4. Commit and push to your fork's `main` branch.
 5. Confirm that the corresponding badge above is green.
 
-Python labs use `pytest`. Rust labs use `cargo test`, `cargo fmt --check`, and `cargo clippy -- -D warnings`.
+Start a Python lab with `uv sync --locked`, then run its documented `uv run python -m pytest` command. Rust labs use `cargo test`, `cargo fmt --check`, and `cargo clippy -- -D warnings`.

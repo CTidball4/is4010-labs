@@ -30,6 +30,7 @@ def main() -> int:
         username = field(text, "GitHub username")
         fork_url = field(text, "Fork URL")
         clone_verified = field(text, "Local clone verified").lower()
+        uv_version = field(text, "uv version")
         python_version = field(text, "Python version")
     except ValueError as error:
         print(error)
@@ -46,11 +47,14 @@ def main() -> int:
     if clone_verified != "yes":
         errors.append("Local clone verified must be `yes`")
 
-    version_match = re.fullmatch(r"(\d+)\.(\d+)(?:\.\d+)?", python_version)
-    if not version_match or tuple(map(int, version_match.groups())) < (3, 10):
-        errors.append("Python version must be 3.10 or newer, such as `3.11.9`")
+    if not re.fullmatch(r"\d+\.\d+\.\d+", uv_version):
+        errors.append("uv version must use the format `0.x.x`")
 
-    placeholders = ("YOUR-USERNAME", "yes-or-no", "3.x.x")
+    version_match = re.fullmatch(r"(\d+)\.(\d+)(?:\.\d+)?", python_version)
+    if not version_match or tuple(map(int, version_match.groups()))[:2] != (3, 12):
+        errors.append("Python version must be the course version, Python 3.12")
+
+    placeholders = ("YOUR-USERNAME", "yes-or-no", "0.x.x", "3.12.x")
     if any(placeholder in text for placeholder in placeholders):
         errors.append("Replace every template placeholder")
 

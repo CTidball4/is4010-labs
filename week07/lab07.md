@@ -50,7 +50,7 @@ The tests replace `requests.get` with local fakes. They never contact a live ser
 ## Test locally
 
 ```bash
-PYTHONPATH=week07 pytest week07/tests/ -v
+uv run --directory week07 python -m pytest tests/ -v
 ```
 
 ## Submit
@@ -62,4 +62,3 @@ git push origin main
 ```
 
 A green Week 07 badge earns 10 points.
-

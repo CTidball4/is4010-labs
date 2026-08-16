@@ -1,51 +1,43 @@
-# Lab 02 prompt journal
+# Lab 02 CLI comparison journal
 
-## Function 1: make_greeting
+Do not include passwords, tokens, API keys, or complete authentication output.
 
-### Initial prompt 1
+## Tool check
 
-```text
-YOUR RESPONSE
-```
+### GitHub Copilot CLI
 
-### Refined CPTF prompt 1
+YOUR RESPONSE — State that you installed and authenticated the tool, then record only its version or another non-sensitive verification detail.
 
-```text
-YOUR RESPONSE
-```
+### Antigravity CLI
 
-## Function 2: is_even
+YOUR RESPONSE — State that you installed and authenticated the tool, then record only its version or another non-sensitive verification detail.
 
-### Initial prompt 2
+## Shared task
 
-```text
-YOUR RESPONSE
-```
+### Shared prompt
 
-### Refined CPTF prompt 2
+Paste the exact prompt you submitted to both CLI tools.
 
 ```text
 YOUR RESPONSE
 ```
 
-## Function 3: count_vowels
+### Copilot CLI observations
 
-### Initial prompt 3
+YOUR RESPONSE — In at least 50 words, summarize the suggested approach, anything you questioned, and what you would verify. Do not paste a full transcript.
 
-```text
-YOUR RESPONSE
-```
+### Antigravity CLI observations
 
-### Refined CPTF prompt 3
+YOUR RESPONSE — In at least 50 words, summarize the suggested approach, anything you questioned, and what you would verify. Do not paste a full transcript.
 
-```text
-YOUR RESPONSE
-```
+### Comparison
 
-## Test-guided revision
+YOUR RESPONSE — In at least 100 words, compare the two responses for correctness, clarity, assumptions, and usefulness. Explain which approach you selected or how you combined them.
 
-YOUR RESPONSE — In at least 75 words, describe a test result that caused you to revise your prompt or generated code. Explain the mismatch, what context you added, and what changed.
+## Test-guided implementation
 
-## Explanation and reflection
+YOUR RESPONSE — In at least 100 words, describe the test result, inspection, or manual check that influenced your final code. Explain any revision you made and why the final behavior matches the function contracts.
 
-YOUR RESPONSE — In at least 100 words, explain one generated function in your own words. Identify its input, output, and main logic. Then describe one useful capability and one limitation or mistake you observed while working with the coding assistant.
+## Preferred tool combination
+
+YOUR RESPONSE — In at least 100 words, reflect on how a browser chat, GitHub Copilot in VS Code, Copilot CLI, and Antigravity CLI each fit your workflow. Identify the combination you currently prefer and one situation that could change your choice.

@@ -5,12 +5,16 @@ on:
     paths:
       - 'week08/**'
       - '.github/workflows/week08.yml'
-      - 'requirements.txt'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.python-version'
   pull_request:
     paths:
       - 'week08/**'
       - '.github/workflows/week08.yml'
-      - 'requirements.txt'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.python-version'
   workflow_dispatch:
 
 permissions:
@@ -36,14 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
         with:
-          python-version: '3.11'
-          cache: pip
+          enable-cache: true
       - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+        run: uv sync --locked
       - name: Run Lab 08 grader
-        env:
-          PYTHONPATH: '.'
-        run: python -m pytest week08/tests/ -v
-
+        run: uv run python -m pytest week08/tests/ -v

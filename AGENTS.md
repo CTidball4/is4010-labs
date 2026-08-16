@@ -14,7 +14,7 @@ Students may edit only the deliverables named by the current lab:
 Students and AI assistants must not modify:
 
 - `README.md`, `AGENTS.md`, or any `labXX.md`
-- `requirements.txt`, `Cargo.toml`, or `Cargo.lock`
+- `pyproject.toml`, `uv.lock`, `.python-version`, `Cargo.toml`, or `Cargo.lock`
 - Anything under `.github/`
 - Any `tests/` directory or embedded test module
 
@@ -27,10 +27,8 @@ Each lab has one GitHub Actions workflow and one README badge. A green badge on 
 Python example:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-PYTHONPATH=week03 pytest week03/tests/ -v
+uv sync --locked
+uv run --directory week03 python -m pytest tests/ -v
 ```
 
 Rust example:

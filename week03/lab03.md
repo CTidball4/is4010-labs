@@ -41,7 +41,7 @@ The function must:
 From the repository root:
 
 ```bash
-PYTHONPATH=week03 pytest week03/tests/ -v
+uv run --directory week03 python -m pytest tests/ -v
 ```
 
 The tests replace random numbers and keyboard input with predictable values.
@@ -55,4 +55,3 @@ git push origin main
 ```
 
 A green Week 03 badge earns 10 points.
-

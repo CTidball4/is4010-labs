@@ -77,7 +77,7 @@ Load the API key from the `WEATHER_API_KEY` environment variable first, then fro
 ## Test locally
 
 ```bash
-PYTHONPATH=. pytest week08/tests/ -v
+uv run python -m pytest week08/tests/ -v
 ```
 
 ## Manual API setup
@@ -99,4 +99,3 @@ git push origin main
 ```
 
 A green Week 08 badge earns 10 points.
-
