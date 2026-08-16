@@ -1,0 +1,49 @@
+name: Lab 07 - External data and APIs
+
+on:
+  push:
+    paths:
+      - 'week07/**'
+      - '.github/workflows/week07.yml'
+      - 'requirements.txt'
+  pull_request:
+    paths:
+      - 'week07/**'
+      - '.github/workflows/week07.yml'
+      - 'requirements.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lab-07-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  template:
+    if: github.repository == 'bgreenwell/is4010-labs'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate starter structure
+        run: |
+          test -f week07/lab07.md
+          test -d week07/tests
+
+  grade:
+    if: github.repository != 'bgreenwell/is4010-labs'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run Lab 07 grader
+        env:
+          PYTHONPATH: 'week07'
+        run: python -m pytest week07/tests/ -v
+

@@ -1,0 +1,49 @@
+name: Lab 05 - Functions and error handling
+
+on:
+  push:
+    paths:
+      - 'week05/**'
+      - '.github/workflows/week05.yml'
+      - 'requirements.txt'
+  pull_request:
+    paths:
+      - 'week05/**'
+      - '.github/workflows/week05.yml'
+      - 'requirements.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lab-05-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  template:
+    if: github.repository == 'bgreenwell/is4010-labs'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate starter structure
+        run: |
+          test -f week05/lab05.md
+          test -d week05/tests
+
+  grade:
+    if: github.repository != 'bgreenwell/is4010-labs'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run Lab 05 grader
+        env:
+          PYTHONPATH: 'week05'
+        run: python -m pytest week05/tests/ -v
+

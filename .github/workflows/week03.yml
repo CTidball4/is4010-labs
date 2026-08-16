@@ -1,0 +1,49 @@
+name: Lab 03 - Python basics
+
+on:
+  push:
+    paths:
+      - 'week03/**'
+      - '.github/workflows/week03.yml'
+      - 'requirements.txt'
+  pull_request:
+    paths:
+      - 'week03/**'
+      - '.github/workflows/week03.yml'
+      - 'requirements.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lab-03-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  template:
+    if: github.repository == 'bgreenwell/is4010-labs'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate starter structure
+        run: |
+          test -f week03/lab03.md
+          test -d week03/tests
+
+  grade:
+    if: github.repository != 'bgreenwell/is4010-labs'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run Lab 03 grader
+        env:
+          PYTHONPATH: 'week03'
+        run: python -m pytest week03/tests/ -v
+
