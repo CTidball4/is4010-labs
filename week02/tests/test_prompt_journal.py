@@ -9,13 +9,22 @@ from pathlib import Path
 JOURNAL = Path(__file__).parents[1] / "lab02_prompts.md"
 
 
+# Markers left over from the template. "TODO" is matched case-sensitively and on word
+# boundaries so that ordinary prose ("my todo list") does not fail the lab.
+LEFTOVER_MARKERS = (
+    re.compile(r"YOUR RESPONSE", re.IGNORECASE),
+    re.compile(r"\[paste here\]", re.IGNORECASE),
+    re.compile(r"\bTODO\b"),
+)
+
+
 def journal_text() -> str:
     assert JOURNAL.exists(), "Create week02/lab02_prompts.md from the template"
     text = JOURNAL.read_text(encoding="utf-8")
-    forbidden = ("YOUR RESPONSE", "TODO", "[paste here]")
-    assert not any(marker.lower() in text.lower() for marker in forbidden), (
-        "Replace every template marker in lab02_prompts.md"
-    )
+    for marker in LEFTOVER_MARKERS:
+        assert not marker.search(text), (
+            f"Replace every template marker in lab02_prompts.md (found {marker.pattern})"
+        )
     return text
 
 
