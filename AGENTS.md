@@ -40,6 +40,14 @@ cargo fmt --check
 cargo clippy -- -D warnings
 ```
 
+## GitHub Actions pinning policy
+
+`actions/checkout` stays on a major version tag; it is GitHub-owned. Every third-party action is
+pinned to a full commit SHA with the version in a trailing comment, so a moved tag cannot change
+what runs here or in a student's fork. `dtolnay/rust-toolchain` is pinned to a `master` SHA with an
+explicit `toolchain: stable` input rather than `@stable`, which is a moving branch reference.
+Resolve a new SHA with `gh api /repos/OWNER/REPO/commits/TAG --jq .sha`.
+
 ## Security
 
 Never commit API keys, tokens, local configuration, virtual environments, build outputs, or instructor solutions. `week08/config.py` is intentionally ignored.
