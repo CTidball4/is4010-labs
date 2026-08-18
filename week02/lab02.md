@@ -67,7 +67,7 @@ uv run --directory week02 python -m pytest tests/ -v
 git diff -- week02/lab02.py week02/lab02_prompts.md
 ```
 
-If a test fails, give the agent the intended behavior and relevant failure message, then decide whether its revision is correct. Do not ask it merely to “make the tests pass.” Inspect the final diff before committing it.
+If a test fails, give the agent the intended behavior and relevant failure message, then decide whether its revision is correct. Do not ask it merely to "make the tests pass." Inspect the final diff before committing it.
 
 GitHub Actions checks the Python behavior and whether your journal has the required structure. It cannot verify which tools are installed on your computer; your journal is your record of completing the comparison.
 

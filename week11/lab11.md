@@ -1,6 +1,7 @@
 # Lab 11: Structs, enums, and methods
 
-**Due**: Sunday at 11:59 PM &nbsp; **Points:** 10
+**Due:** Sunday at 11:59 PM  
+**Points:** 10
 
 Open `src/student.rs` and implement every `todo!()`. The types (`Student`, `Grade`, `CourseGrade`, `StudentDatabase`) are already defined — do not change them. The test suite is pre-written — make it pass. Do not modify the test module.
 
@@ -46,7 +47,9 @@ When implementing a method, rename parameters by dropping the leading `_` (e.g.,
 | `average_gpa()` | Mean GPA across all students; `0.0` if empty |
 | `list_students()` | `Vec<&Student>` of all students |
 
-## Commands
+## Test locally
+
+Run these from the `week11` directory:
 
 ```bash
 cargo test
@@ -54,12 +57,14 @@ cargo fmt
 cargo clippy -- -D warnings
 ```
 
+CI runs `cargo fmt --check`, so run `cargo fmt` before you push.
+
 ## Submit
 
 ```bash
 git add week11/
-git commit -m "Complete lab 11"
+git commit -m "Complete Lab 11"
 git push origin main
 ```
 
-Verify a green checkmark on the **Actions** tab of your GitHub fork.
+A green Week 11 badge earns 10 points.

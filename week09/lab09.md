@@ -1,6 +1,7 @@
 # Lab 09: Rust basics
 
-**Due**: Sunday at 11:59 PM &nbsp; **Points:** 10
+**Due:** Sunday at 11:59 PM  
+**Points:** 10
 
 Open `src/main.rs` and implement every `todo!()`. The test suite is pre-written — make it pass. Do not modify the test module.
 
@@ -20,7 +21,9 @@ When implementing a function, rename parameters by dropping the leading `_` (e.g
 | `find_max_in_vec(numbers)` | Return the maximum value, or `None` if empty |
 | `count_evens(numbers)` | Return the count of even numbers in the slice |
 
-## Commands
+## Test locally
+
+Run these from the `week09` directory:
 
 ```bash
 cargo test
@@ -28,12 +31,14 @@ cargo fmt
 cargo clippy -- -D warnings
 ```
 
+CI runs `cargo fmt --check`, so run `cargo fmt` before you push.
+
 ## Submit
 
 ```bash
 git add week09/
-git commit -m "Complete lab 09"
+git commit -m "Complete Lab 09"
 git push origin main
 ```
 
-Verify a green checkmark on the **Actions** tab of your GitHub fork.
+A green Week 09 badge earns 10 points.

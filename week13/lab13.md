@@ -1,6 +1,7 @@
 # Lab 13: Idiomatic Rust
 
-**Due**: Sunday at 11:59 PM &nbsp; **Points:** 10
+**Due:** Sunday at 11:59 PM  
+**Points:** 10
 
 Open `src/main.rs` and implement every `todo!()`. The test suite is pre-written — make it pass. Do not modify the test module.
 
@@ -26,7 +27,9 @@ For `make_counter`: the closure wrapper is already in place — rename `_count` 
 | `Display for ParseError` | Both variants must produce a non-empty message |
 | `parse_positive_number(input)` | Parse `input` as `i32 > 0`; return `ParseError::NotANumber` or `ParseError::NotPositive` on failure |
 
-## Commands
+## Test locally
+
+Run these from the `week13` directory:
 
 ```bash
 cargo test
@@ -34,12 +37,14 @@ cargo fmt
 cargo clippy -- -D warnings
 ```
 
+CI runs `cargo fmt --check`, so run `cargo fmt` before you push.
+
 ## Submit
 
 ```bash
 git add week13/
-git commit -m "Complete lab 13"
+git commit -m "Complete Lab 13"
 git push origin main
 ```
 
-Verify a green checkmark on the **Actions** tab of your GitHub fork.
+A green Week 13 badge earns 10 points.

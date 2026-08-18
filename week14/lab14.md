@@ -1,6 +1,7 @@
 # Lab 14: CLI application (capstone)
 
-**Due**: Sunday at 11:59 PM &nbsp; **Points:** 10
+**Due:** Sunday at 11:59 PM  
+**Points:** 10
 
 This lab spans three source files. Implement every `todo!()` in all three. The test suite is pre-written — make it pass. Do not modify the test modules.
 
@@ -42,7 +43,9 @@ cargo run -- pin --length 8
 cargo run -- validate "MyStr0ng!Pass2024"
 ```
 
-## Commands
+## Test locally
+
+Run these from the `week14` directory:
 
 ```bash
 cargo test
@@ -50,12 +53,14 @@ cargo fmt
 cargo clippy -- -D warnings
 ```
 
+CI runs `cargo fmt --check`, so run `cargo fmt` before you push.
+
 ## Submit
 
 ```bash
 git add week14/
-git commit -m "Complete lab 14"
+git commit -m "Complete Lab 14"
 git push origin main
 ```
 
-Verify a green checkmark on the **Actions** tab of your GitHub fork.
+A green Week 14 badge earns 10 points.
