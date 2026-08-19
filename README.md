@@ -130,6 +130,10 @@ tools earn their keep.
 - **Never paste an API key, token, or credential** into a prompt. This matters from week 08 on.
 - **You are responsible for every line you submit.** Read the explanation, make the change
   yourself, and re-run the check locally before you push.
+- **If your assistant proposes editing a test, a workflow, or a lab file, stop.** Those files set
+  your grade, and `AGENTS.md` in this repository tells agents they are read-only. A test that was
+  changed to pass is a false green badge, not a finished lab. Inspect `git diff` before every
+  commit so you always know what changed.
 
 Environment problems, such as a tool that will not install or a workflow that never ran, are
 covered in the [course troubleshooting guide](https://bgreenwell.github.io/is4010-website/resources/troubleshooting.html).
