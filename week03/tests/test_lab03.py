@@ -50,8 +50,10 @@ def test_guessing_game_correct_guess():
     """
     # Mock random.randint in the lab03 module to return a predictable number (50)
     with patch('lab03.random.randint', return_value=50):
-        # Mock input to simulate user guessing correctly
-        with patch('builtins.input', return_value='50'):
+        # side_effect (not return_value) supplies a finite number of guesses. A game
+        # that never stops on the correct guess raises StopIteration and fails fast
+        # instead of looping forever and hanging the grader.
+        with patch('builtins.input', side_effect=['50']):
             # Mock print to capture output
             with patch('builtins.print') as mock_print:
                 guessing_game()

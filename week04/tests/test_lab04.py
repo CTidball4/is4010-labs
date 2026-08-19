@@ -62,3 +62,8 @@ def test_get_list_of_even_numbers_all_even():
 
 def test_get_list_of_even_numbers_empty():
     assert get_list_of_even_numbers([]) == []
+
+def test_get_list_of_even_numbers_keeps_zero_and_negatives():
+    # The lab requires that zero and negative even numbers are retained, so a
+    # positives-only filter must not pass.
+    assert get_list_of_even_numbers([-4, -3, -2, 0, 1, 2]) == [-4, -2, 0, 2]

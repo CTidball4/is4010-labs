@@ -28,6 +28,7 @@ jobs:
   template:
     if: github.repository == 'bgreenwell/is4010-labs'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
       - name: Validate starter structure
@@ -38,6 +39,7 @@ jobs:
   grade:
     if: github.repository != 'bgreenwell/is4010-labs'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
       - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
