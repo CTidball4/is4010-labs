@@ -1,4 +1,6 @@
 # test_lab06.py
+from datetime import date
+
 import pytest
 from lab06 import Book, EBook
 
@@ -19,9 +21,10 @@ def test_book_str_method():
 
 
 def test_book_get_age():
-    # Assuming current year is 2026 as per lab instructions
+    # Derived from the current year, so this stays correct every year and a
+    # hardcoded year in the implementation will fail.
     book = Book("The Hobbit", "J.R.R. Tolkien", 1937)
-    assert book.get_age() == 2026 - 1937
+    assert book.get_age() == date.today().year - 1937
 
 
 # Tests for the EBook child class
@@ -45,5 +48,4 @@ def test_ebook_str_method():
 
 def test_ebook_inherits_get_age():
     ebook = EBook("Dune", "Frank Herbert", 1965, 5)
-    # 2026 - 1965 = 61
-    assert ebook.get_age() == 61
+    assert ebook.get_age() == date.today().year - 1965

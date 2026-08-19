@@ -21,10 +21,18 @@ Its `__str__` result must include all three values. Add:
 
 ```python
 def get_age(self):
-    """Return 2026 minus the publication year."""
+    """Return the number of years since publication."""
 ```
 
-Use 2026 consistently so the automated result is deterministic.
+Use the **current** year, not a hardcoded one, so the method stays correct as time passes:
+
+```python
+from datetime import date
+
+current_year = date.today().year
+```
+
+The tests calculate the expected age the same way, so a hardcoded year will fail.
 
 ## `EBook`
 
@@ -37,16 +45,6 @@ Its `__str__` result must include the inherited book information, file size, and
 ```bash
 uv run --directory week06 python -m pytest tests/ -v
 ```
-
-## If a test fails
-
-`pytest` prints the failing test's name, the line that failed, and the expected and actual
-values. That is enough context for a coding agent to diagnose it: paste the full output into
-Copilot CLI, Antigravity CLI, or a browser chat and ask what behavior the test expects and why
-yours differs.
-
-Ask for an explanation, not just a passing grade. You are responsible for every line you submit,
-so make sure you can explain the fix before you commit it.
 
 ## Submit
 
