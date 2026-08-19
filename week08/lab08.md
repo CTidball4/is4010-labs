@@ -90,6 +90,16 @@ python week08/weather.py current Cincinnati
 
 Never commit `config.py` or an API key.
 
+## If a test fails
+
+`pytest` prints the failing test's name, the line that failed, and the expected and actual
+values. That is enough context for a coding agent to diagnose it: paste the full output into
+Copilot CLI, Antigravity CLI, or a browser chat and ask what behavior the test expects and why
+yours differs.
+
+Ask for an explanation, not just a passing grade. You are responsible for every line you submit,
+so make sure you can explain the fix before you commit it.
+
 ## Submit
 
 ```bash

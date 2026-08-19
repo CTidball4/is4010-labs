@@ -81,6 +81,12 @@ One common lint is **not** auto-fixable, and it comes straight from Python habit
 Read the message clippy prints; it names the file, the line, and the idiom. Re-run all three
 commands before you push.
 
+`cargo test` and `cargo clippy` both print the file, the line, and the reason. That is exactly
+the context a coding agent needs. Paste the full output into Copilot CLI or Antigravity CLI and
+ask it to explain the failure and show the idiomatic fix. Ask what the compiler or lint is
+objecting to and why, not merely to make the check pass, and make sure you can explain the
+change before you commit it.
+
 ## Submit
 
 ```bash
