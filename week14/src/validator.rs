@@ -1,4 +1,4 @@
-// Week 14 — validator.rs
+// Week 14: validator.rs
 //
 // Implement password strength validation.
 // The tests at the bottom verify your implementations.
@@ -86,7 +86,7 @@ pub const COMMON_PASSWORDS: &[&str] = &[
 ];
 
 // ============================================================================
-// TESTS — DO NOT MODIFY
+// TESTS: DO NOT MODIFY
 // ============================================================================
 #[cfg(test)]
 mod tests {
@@ -96,20 +96,20 @@ mod tests {
 
     #[test]
     fn test_strength_weak_short() {
-        // "hi" — length 2, no upper, has lower, no digit, no symbol → score ~1
+        // "hi": length 2, no upper, has lower, no digit, no symbol → score ~1
         assert_eq!(validate_strength("hi"), PasswordStrength::Weak);
     }
 
     #[test]
     fn test_strength_medium() {
-        // "Password" — length 8 (+1), has lower (+1), has upper (+1), no digit, no symbol → score 3
+        // "Password": length 8 (+1), has lower (+1), has upper (+1), no digit, no symbol → score 3
         assert_eq!(validate_strength("Password"), PasswordStrength::Medium);
     }
 
     #[test]
     fn test_strength_strong() {
-        // "Password1" — length 8 (+1), lower (+1), upper (+1), digit (+1), no symbol → score 4…
-        // "Password1!" — length 10 (+1 for ≥8), lower (+1), upper (+1), digit (+1), symbol (+1) → score 5
+        // "Password1": length 8 (+1), lower (+1), upper (+1), digit (+1), no symbol → score 4…
+        // "Password1!": length 10 (+1 for ≥8), lower (+1), upper (+1), digit (+1), symbol (+1) → score 5
         assert_eq!(validate_strength("Password1!"), PasswordStrength::Strong);
     }
 

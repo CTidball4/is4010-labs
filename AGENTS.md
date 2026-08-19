@@ -1,4 +1,4 @@
-# AGENTS.md — IS4010 labs
+# AGENTS.md: IS4010 labs
 
 This public repository contains 14 student labs for IS4010. Weeks 01–08 use the Python environment, and Weeks 09–14 use Rust.
 

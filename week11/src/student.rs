@@ -6,7 +6,7 @@
 use std::collections::HashMap;
 
 // ============================================================================
-// TYPES — do not modify these definitions
+// TYPES: do not modify these definitions
 // ============================================================================
 
 pub struct Student {
@@ -39,7 +39,7 @@ pub struct StudentDatabase {
 }
 
 // ============================================================================
-// IMPLEMENTATIONS — replace every todo!() with a real implementation.
+// IMPLEMENTATIONS: replace every todo!() with a real implementation.
 // When you do, remove the leading `_` from each parameter name.
 // ============================================================================
 
@@ -166,7 +166,7 @@ impl StudentDatabase {
 }
 
 // ============================================================================
-// TESTS — DO NOT MODIFY
+// TESTS: DO NOT MODIFY
 // ============================================================================
 #[cfg(test)]
 mod tests {

@@ -3,7 +3,7 @@
 **Due:** Sunday at 11:59 PM  
 **Points:** 10
 
-Open `src/student.rs` and implement every `todo!()`. The types (`Student`, `Grade`, `CourseGrade`, `StudentDatabase`) are already defined — do not change them. The test suite is pre-written — make it pass. Do not modify the test module.
+Open `src/student.rs` and implement every `todo!()`. The types (`Student`, `Grade`, `CourseGrade`, `StudentDatabase`) are already defined, so do not change them. The test suite is pre-written, so make it pass. Do not modify the test module.
 
 When implementing a method, rename parameters by dropping the leading `_` (e.g., `_id` → `id`).
 

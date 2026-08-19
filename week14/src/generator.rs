@@ -1,4 +1,4 @@
-// Week 14 — generator.rs
+// Week 14: generator.rs
 //
 // Implement the three password generation functions below.
 // Each function must produce output that satisfies the constraints in its docstring.
@@ -22,7 +22,7 @@ use rand::Rng;
 /// assert_eq!(pwd.len(), 12);
 /// ```
 pub fn generate_random(_length: usize, _use_symbols: bool) -> String {
-    todo!("Implement generate_random — hint: build a charset string then pick random chars from it using rand::thread_rng()")
+    todo!("Implement generate_random, hint: build a charset string then pick random chars from it using rand::thread_rng()")
 }
 
 /// Generates a passphrase made of `word_count` random common English words joined by `separator`.
@@ -37,7 +37,7 @@ pub fn generate_random(_length: usize, _use_symbols: bool) -> String {
 /// assert_eq!(phrase.split('-').count(), 3);
 /// ```
 pub fn generate_passphrase(_word_count: usize, _separator: char) -> String {
-    todo!("Implement generate_passphrase — hint: pick random indices into WORD_LIST, join with separator.to_string()")
+    todo!("Implement generate_passphrase, hint: pick random indices into WORD_LIST, join with separator.to_string()")
 }
 
 /// Generates a numeric PIN of the given `length` (digits 0–9 only).
@@ -51,7 +51,7 @@ pub fn generate_passphrase(_word_count: usize, _separator: char) -> String {
 /// assert!(pin.chars().all(|c| c.is_ascii_digit()));
 /// ```
 pub fn generate_pin(_length: usize) -> String {
-    todo!("Implement generate_pin — hint: sample from '0'..='9'")
+    todo!("Implement generate_pin, hint: sample from '0'..='9'")
 }
 
 // A small word list for passphrases.
@@ -65,7 +65,7 @@ pub const WORD_LIST: &[&str] = &[
 ];
 
 // ============================================================================
-// TESTS — DO NOT MODIFY
+// TESTS: DO NOT MODIFY
 // ============================================================================
 #[cfg(test)]
 mod tests {

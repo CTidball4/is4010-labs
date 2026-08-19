@@ -20,7 +20,7 @@ fn main() {
 }
 
 // ============================================================================
-// STACK<T> — implement all methods and trait impls below.
+// STACK<T>: implement all methods and trait impls below.
 // When you implement a method, remove the leading `_` from each parameter name.
 // ============================================================================
 
@@ -67,25 +67,25 @@ impl<T> Stack<T> {
 }
 
 // ============================================================================
-// DISPLAY — format the stack as "[bottom, ..., top]"
+// DISPLAY: format the stack as "[bottom, ..., top]"
 //
 // Example: a stack with 1 pushed first and 3 pushed last prints as "[1, 2, 3]".
 // An empty stack prints as "[]".
 // ============================================================================
 impl<T: fmt::Debug> fmt::Display for Stack<T> {
     fn fmt(&self, _f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        todo!("Implement Display for Stack<T> — hint: write!(f, \"[...]\") using self.data")
+        todo!("Implement Display for Stack<T>, hint: write!(f, \"[...]\") using self.data")
     }
 }
 
 // ============================================================================
-// ITERATOR — consume the stack from top to bottom
+// ITERATOR: consume the stack from top to bottom
 //
 // Implement the helper struct and then the two trait impls below.
 // ============================================================================
 
 // ============================================================================
-// TESTS — DO NOT MODIFY
+// TESTS: DO NOT MODIFY
 // ============================================================================
 #[cfg(test)]
 mod tests {

@@ -3,13 +3,13 @@
 **Due:** Sunday at 11:59 PM  
 **Points:** 10
 
-This lab spans three source files. Implement every `todo!()` in all three. The test suite is pre-written — make it pass. Do not modify the test modules.
+This lab spans three source files. Implement every `todo!()` in all three. The test suite is pre-written, so make it pass. Do not modify the test modules.
 
 When implementing a function, rename parameters by dropping the leading `_`.
 
 ## What to implement
 
-**`src/generator.rs`** — password generation (uses the `rand` crate)
+**`src/generator.rs`**: password generation (uses the `rand` crate)
 
 | Function | Description |
 |----------|-------------|
@@ -17,7 +17,7 @@ When implementing a function, rename parameters by dropping the leading `_`.
 | `generate_passphrase(word_count, separator)` | Random words from `WORD_LIST` joined by `separator` |
 | `generate_pin(length)` | String of random decimal digits |
 
-**`src/validator.rs`** — strength rating
+**`src/validator.rs`**: strength rating
 
 | Function | Description |
 |----------|-------------|
@@ -25,7 +25,7 @@ When implementing a function, rename parameters by dropping the leading `_`.
 | `check_common_patterns(password)` | `true` if all chars identical or password is in `COMMON_PASSWORDS` (case-insensitive) |
 | `calculate_entropy(password)` | `length × log₂(charset_size)`; charset grows as classes appear: 26/52/62/94 |
 
-**`src/main.rs`** — CLI wiring (the `clap` structs are already defined)
+**`src/main.rs`**: CLI wiring (the `clap` structs are already defined)
 
 | Match arm | What to do |
 |-----------|-----------|

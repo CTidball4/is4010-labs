@@ -5,9 +5,9 @@
 
 Open `src/main.rs`. There are two parts.
 
-**Part 1 — borrow-checker puzzles (not graded automatically):** Seven functions are commented out with `/* ... */`. Each has a compile error. Read the comment above each one, fix the broken code, then uncomment the call in `main()` to verify it runs.
+**Part 1, borrow-checker puzzles (not graded automatically):** Seven functions are commented out with `/* ... */`. Each has a compile error. Read the comment above each one, fix the broken code, then uncomment the call in `main()` to verify it runs.
 
-**Part 2 — implementation exercises (graded):** Implement the four `pub` functions below. Remove the leading `_` from parameter names as you go. Do not modify the test module.
+**Part 2, implementation exercises (graded):** Implement the four `pub` functions below. Remove the leading `_` from parameter names as you go. Do not modify the test module.
 
 ## What to implement (Part 2)
 

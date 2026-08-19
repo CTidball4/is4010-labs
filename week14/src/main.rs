@@ -17,7 +17,7 @@ use generator::{generate_passphrase, generate_pin, generate_random};
 use validator::{calculate_entropy, check_common_patterns, validate_strength};
 
 // ============================================================================
-// CLI DEFINITION — fill in the argument fields marked with todo comments
+// CLI DEFINITION: fill in the argument fields marked with todo comments
 // ============================================================================
 
 /// A password generator CLI.
@@ -67,7 +67,7 @@ enum Commands {
 }
 
 // ============================================================================
-// MAIN — implement the match arms below
+// MAIN: implement the match arms below
 // ============================================================================
 fn main() {
     let cli = Cli::parse();

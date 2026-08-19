@@ -1,9 +1,9 @@
 // Week 13: Idiomatic Rust
 //
 // Practice three pillars of idiomatic Rust:
-//   Part 1 — Iterators and closures
-//   Part 2 — Error handling with Result
-//   Part 3 — Smart pointers (Box for recursive types)
+//   Part 1: iterators and closures
+//   Part 2: error handling with Result
+//   Part 3: smart pointers (Box for recursive types)
 //
 // Run: cargo test
 
@@ -48,7 +48,7 @@ pub fn process_numbers(_numbers: &[i32]) -> i32 {
 /// ```
 pub fn make_counter() -> impl FnMut() -> i32 {
     let mut _count = 0;
-    move || todo!("Implement make_counter — hint: increment _count and return it")
+    move || todo!("Implement make_counter, hint: increment _count and return it")
 }
 
 // ============================================================================
@@ -83,7 +83,7 @@ pub fn parse_positive_number(_input: &str) -> Result<i32, ParseError> {
 }
 
 // ============================================================================
-// TESTS — DO NOT MODIFY
+// TESTS: DO NOT MODIFY
 // ============================================================================
 #[cfg(test)]
 mod tests {
@@ -97,7 +97,7 @@ mod tests {
         assert_eq!(count, 3);
         // avg = (5 + 5 + 4) / 3 = 14/3 ≈ 4.666…
         assert!((avg - 14.0 / 3.0).abs() < 1e-9);
-        assert_eq!(longest, "hello"); // or "world" — both length 5; either accepted
+        assert_eq!(longest, "hello"); // or "world", both length 5; either accepted
     }
 
     #[test]

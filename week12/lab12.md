@@ -3,7 +3,7 @@
 **Due:** Sunday at 11:59 PM  
 **Points:** 10
 
-Open `src/main.rs` and implement every `todo!()`. The `Stack<T>` struct and trait impl skeletons are already defined — make the pre-written tests pass. Do not modify the test module.
+Open `src/main.rs` and implement every `todo!()`. The `Stack<T>` struct and trait impl skeletons are already defined, so make the pre-written tests pass. Do not modify the test module.
 
 When implementing a method, rename parameters by dropping the leading `_`.
 

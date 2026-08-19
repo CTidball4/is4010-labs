@@ -3,13 +3,13 @@
 **Due:** Sunday at 11:59 PM  
 **Points:** 10
 
-Open `src/main.rs` and implement every `todo!()`. The test suite is pre-written — make it pass. Do not modify the test module.
+Open `src/main.rs` and implement every `todo!()`. The test suite is pre-written, so make it pass. Do not modify the test module.
 
 When implementing a function, rename parameters by dropping the leading `_`.
 
 ## What to implement
 
-**Part 1 — Iterators and closures**
+**Part 1: iterators and closures**
 
 | Function | Description |
 |----------|-------------|
@@ -17,9 +17,9 @@ When implementing a function, rename parameters by dropping the leading `_`.
 | `process_numbers(numbers)` | Sum of squares of all even numbers: `[1,2,3,4]` → `4+16 = 20` |
 | `make_counter()` | Return a closure (`impl FnMut() -> i32`) that increments on each call |
 
-For `make_counter`: the closure wrapper is already in place — rename `_count` → `count`, increment it, and return the new value.
+For `make_counter`: the closure wrapper is already in place, so rename `_count` to `count`, increment it, and return the new value.
 
-**Part 2 — Error handling with `Result`**
+**Part 2: error handling with `Result`**
 
 | Function / type | Description |
 |-----------------|-------------|

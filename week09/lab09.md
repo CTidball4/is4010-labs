@@ -3,7 +3,7 @@
 **Due:** Sunday at 11:59 PM  
 **Points:** 10
 
-Open `src/main.rs` and implement every `todo!()`. The test suite is pre-written — make it pass. Do not modify the test module.
+Open `src/main.rs` and implement every `todo!()`. The test suite is pre-written, so make it pass. Do not modify the test module.
 
 When implementing a function, rename parameters by dropping the leading `_` (e.g., `_a` → `a`).
 

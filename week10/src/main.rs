@@ -2,12 +2,12 @@
 //
 // This lab has two parts:
 //
-// PART 1 — Borrow checker puzzles (7 problems)
+// PART 1: borrow checker puzzles (7 problems)
 //   Each problem is a function that has a compile error related to ownership or
 //   borrowing. Read the comment above each one, fix the bug, then uncomment the
 //   call in main() to verify it runs.
 //
-// PART 2 — Implementation exercises (5 functions)
+// PART 2: implementation exercises (5 functions)
 //   Write functions that demonstrate correct ownership/borrowing patterns.
 //   The test suite at the bottom verifies your implementations.
 //
@@ -62,7 +62,7 @@ fn problem_2() {
     println!("Problem 2: Mutable and immutable borrow conflict");
     let mut s = String::from("hello");
     let r1 = &s;      // immutable borrow
-    let r2 = &mut s;  // mutable borrow — ERROR!
+    let r2 = &mut s;  // mutable borrow, ERROR!
     println!("  {}, {}", r1, r2);
 }
 */
@@ -153,7 +153,7 @@ fn print_with_number(s: String, n: i32) {
 */
 
 // ============================================================================
-// PROBLEM 7: Lifetime — reference doesn't live long enough
+// PROBLEM 7: lifetime, reference doesn't live long enough
 // ============================================================================
 // Error: The reference outlives the data it points to.
 // Fix: Move the String declaration outside the inner scope.
@@ -173,7 +173,7 @@ fn problem_7() {
 */
 
 // ============================================================================
-// PART 2 — Implementation exercises
+// PART 2: implementation exercises
 //
 // Write these functions from scratch using correct ownership/borrowing.
 // The tests below verify your implementations.
@@ -183,7 +183,7 @@ fn problem_7() {
 ///
 /// Demonstrates: move in, transform, move out ("consume and return" pattern).
 pub fn to_uppercase_owned(_s: String) -> String {
-    todo!("Implement to_uppercase_owned — hint: .to_uppercase()")
+    todo!("Implement to_uppercase_owned, hint: .to_uppercase()")
 }
 
 /// Borrows a String immutably and returns its length.
@@ -191,25 +191,25 @@ pub fn to_uppercase_owned(_s: String) -> String {
 /// Demonstrates: read-only borrowing.
 #[allow(clippy::ptr_arg)]
 pub fn string_length(_s: &String) -> usize {
-    todo!("Implement string_length — hint: .len()")
+    todo!("Implement string_length, hint: .len()")
 }
 
 /// Borrows a String mutably and appends `suffix` to it in place.
 ///
 /// Demonstrates: in-place mutation through a mutable borrow.
 pub fn append_suffix(_s: &mut String, _suffix: &str) {
-    todo!("Implement append_suffix — hint: .push_str()")
+    todo!("Implement append_suffix, hint: .push_str()")
 }
 
 /// Creates a new owned String by concatenating two borrowed string slices.
 ///
 /// Demonstrates: producing owned data from borrowed inputs.
 pub fn concat_strings(_s1: &str, _s2: &str) -> String {
-    todo!("Implement concat_strings — hint: format!() or String::from() + push_str()")
+    todo!("Implement concat_strings, hint: format!() or String::from() + push_str()")
 }
 
 // ============================================================================
-// TESTS — DO NOT MODIFY
+// TESTS: DO NOT MODIFY
 // ============================================================================
 #[cfg(test)]
 mod tests {
