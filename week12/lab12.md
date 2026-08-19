@@ -38,6 +38,28 @@ cargo clippy -- -D warnings
 
 CI runs `cargo fmt --check`, so run `cargo fmt` before you push.
 
+## If the style checks fail
+
+`cargo test` checks that your code is **correct**. `cargo fmt` and `cargo clippy` check that it
+is **idiomatic**, and CI runs both, so working code can still leave the badge red. This is not a
+trick: formatting and lints are part of everyday Rust work.
+
+Fix most of it automatically:
+
+```bash
+cargo clippy --fix --allow-dirty
+cargo fmt
+```
+
+One common lint is **not** auto-fixable, and it comes straight from Python habits:
+
+| Clippy says | Why | Rewrite |
+|---|---|---|
+| `the loop variable i is only used to index` | Rust iterates over items directly | `for n in numbers` instead of `for i in 0..numbers.len()` |
+
+Read the message clippy prints; it names the file, the line, and the idiom. Re-run all three
+commands before you push.
+
 ## Submit
 
 ```bash
