@@ -26,7 +26,7 @@ Follow the course [setup guide](https://bgreenwell.github.io/is4010-website/reso
 - Git
 - `uv`
 
-Use Git Bash on Windows or your default shell on macOS/Linux. Open a terminal directly or choose **Terminal > New Terminal** in VS Code, then verify:
+Use Git Bash on Windows, which the Git installer put there for you, or your default shell on macOS/Linux. Open a terminal directly or choose **Terminal > New Terminal** in VS Code, then verify:
 
 ```bash
 code --version
