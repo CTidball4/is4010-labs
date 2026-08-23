@@ -26,6 +26,10 @@ A green badge on your fork's `main` branch means the corresponding lab is comple
 | 13 | Idiomatic Rust | [![Week 13](../../actions/workflows/week13.yml/badge.svg?branch=main)](../../actions/workflows/week13.yml) |
 | 14 | CLI application | [![Week 14](../../actions/workflows/week14.yml/badge.svg?branch=main)](../../actions/workflows/week14.yml) |
 
+Not sure what these look like in practice? The [demo repository](https://github.com/bgreenwell/is4010-labs-demo) is a stand-in for a
+student's fork partway through the semester, with one passing badge, one failing badge, and the
+rest not yet run.
+
 ## Start here
 
 Complete [Lab 01](week01/lab01.md). It walks you through the terminal, forking this repository, cloning your fork, enabling GitHub Actions, and preparing Python with `uv` for the first half of the course.

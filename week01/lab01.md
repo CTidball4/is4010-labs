@@ -119,6 +119,8 @@ git push origin main
 
 Open your fork's README and wait for the Week 01 badge to turn green. Select the badge to inspect the workflow if it fails.
 
+The [demo repository](https://github.com/bgreenwell/is4010-labs-demo) shows what to expect: a passing Week 01 badge, a failing Week 02 badge you can click into to read the error, and later weeks with no status because their checks have not run yet.
+
 ## Submit on Canvas
 
 Submit this single URL:
