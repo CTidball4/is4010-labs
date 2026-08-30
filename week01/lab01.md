@@ -93,7 +93,7 @@ uv run python --version
 uv run python -m pytest --version
 ```
 
-`uv` reads `.python-version`, creates the local `.venv`, and installs the exact dependencies in `uv.lock`. You do not need to activate the environment or install Python separately.
+`uv` reads `.python-version`, creates the local `.venv`, and installs the exact dependencies in `uv.lock`. The lock file also includes the `dev` dependency group, which `uv` installs by default. That is why `pytest` is available even though `requests` is the only direct dependency listed in `pyproject.toml`. You do not need to activate the environment or install Python separately.
 
 ## 7. Enable GitHub Actions
 
