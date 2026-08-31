@@ -93,7 +93,7 @@ uv run python --version
 uv run python -m pytest --version
 ```
 
-`uv` reads `.python-version`, creates the local `.venv`, and installs the exact dependencies in `uv.lock`. You do not need to activate the environment or install Python separately.
+`uv` reads `.python-version`, creates the local `.venv`, and installs the exact dependencies in `uv.lock`. The lock file also includes the `dev` dependency group, which `uv` installs by default. That is why `pytest` is available even though `requests` is the only direct dependency listed in `pyproject.toml`. You do not need to activate the environment or install Python separately.
 
 ## 7. Enable GitHub Actions
 
@@ -116,6 +116,8 @@ git add week01/student_setup.md
 git commit -m "Complete Lab 01 setup"
 git push origin main
 ```
+
+The first push asks for your GitHub username and password. GitHub no longer accepts your account password here, so paste a [personal access token](https://github.com/settings/tokens) with the `repo` scope when Git asks for the password. The [troubleshooting page](https://bgreenwell.github.io/is4010-website/resources/troubleshooting.html) has the full steps.
 
 Open your fork's README and wait for the Week 01 badge to turn green. Select the badge to inspect the workflow if it fails.
 
