@@ -19,7 +19,8 @@ I installed and authenticated the tool, Gemini 3.8 Flash (High).
 Paste the exact prompt you submitted to both CLI tools.
 
 ```text
-Write one paragraph explaining what the best LLM is.```
+Write one paragraph explaining what the best LLM is.
+```
 
 ### Copilot CLI observations
 
