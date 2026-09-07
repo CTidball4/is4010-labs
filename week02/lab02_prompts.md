@@ -6,11 +6,11 @@ Do not include passwords, tokens, API keys, or complete authentication output.
 
 ### GitHub Copilot CLI
 
-YOUR RESPONSE: I installed and authenticated the tool, Version: 1.0.83.
+I installed and authenticated the tool, Version: 1.0.83.
 
 ### Antigravity CLI
 
-YOUR RESPONSE: I installed and authenticated the tool, Gemini 3.8 Flash (High).
+I installed and authenticated the tool, Gemini 3.8 Flash (High).
 
 ## Shared task
 
@@ -23,18 +23,18 @@ Write one paragraph explaining what the best LLM is.```
 
 ### Copilot CLI observations
 
-YOUR RESPONSE: The suggested approach was to explain what the best LLM model is. Copilot explained it very well and didn’t hype up Copilot specifically at all which I thought was a good sign. I didn’t really question anything since there were really no facts to be questioned in the explanation from Copilot.
+The suggested approach was to explain what the best LLM model is. Copilot explained it very well and didn’t hype up Copilot specifically at all which I thought was a good sign. I didn’t really question anything since there were really no facts to be questioned in the explanation from Copilot.
 ### Antigravity CLI observations
 
-YOUR RESPONSE: The suggested approach was to explain the best LLM model. Antigravity explained it very similarly to Copilot but mentioned specific models of Claude, GPT, and Gemini. I didn’t have anything to question besides whether those models were in fact the best. I would verify this by testing the three different models and seeing how they respond to difficult prompts.
+The suggested approach was to explain the best LLM model. Antigravity explained it very similarly to Copilot but mentioned specific models of Claude, GPT, and Gemini. I didn’t have anything to question besides whether those models were in fact the best. I would verify this by testing the three different models and seeing how they respond to difficult prompts.
 
 ### Comparison
 
-YOUR RESPONSE: On correctness Copilot stays very abstract, which makes it hard to fault but also hard to verify against anything. Antigravity takes a bigger risk by naming specific models which reads as more informed but is also the part most likely to age poorly, since which model is "state of the art" shifts a lot. On clarity, Antigravity in my opinion has the better response with three examples given. Copilot's goes toward coding tasks specifically, while Antigravity identifies specific models for different uses. For usefulness, I'd combine them, with Copilot as the opening idea, then borrow Antigravity's use-case categories while dropping the specific model names so the explanation doesn't expire in six months.
+On correctness Copilot stays very abstract, which makes it hard to fault but also hard to verify against anything. Antigravity takes a bigger risk by naming specific models which reads as more informed but is also the part most likely to age poorly, since which model is "state of the art" shifts a lot. On clarity, Antigravity in my opinion has the better response with three examples given. Copilot's goes toward coding tasks specifically, while Antigravity identifies specific models for different uses. For usefulness, I'd combine them, with Copilot as the opening idea, then borrow Antigravity's use-case categories while dropping the specific model names so the explanation doesn't expire in six months.
 
 ## Test-guided implementation
 
-YOUR RESPONSE: Not everything passed on the first test. There was a lot of trial and error during this lab for me as I’m not super knowledgeable in this area yet although I really would like to be. These AI tools are very helpful though and make some parts of the lab very simple and smooth while other times it can make it difficult to figure out. Although in the end the test results work for the most part I believe. I had AI help me make some revisions to the contracts to make them more specific and clear. Overall it ended up being a success.
+Not everything passed on the first test. There was a lot of trial and error during this lab for me as I’m not super knowledgeable in this area yet although I really would like to be. These AI tools are very helpful though and make some parts of the lab very simple and smooth while other times it can make it difficult to figure out. Although in the end the test results work for the most part I believe. I had AI help me make some revisions to the contracts to make them more specific and clear. Overall it ended up being a success.
 
 ## Preferred tool combination
 
